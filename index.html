@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Web Clone</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Sidebar Header -->
+            <header class="header">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23dfe5e7'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z'/></svg>" alt="Profile" class="avatar" style="background-color: #cbd5e1;">
+                <div class="header-icons">
+                    <i class="fas fa-users" title="Communities"></i>
+                    <i class="fas fa-circle-notch" title="Status"></i>
+                    <i class="fas fa-comment-alt" title="New Chat"></i>
+                    <i class="fas fa-ellipsis-v" title="Menu"></i>
+                </div>
+            </header>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search or start new chat" id="searchInput">
+                </div>
+            </div>
+
+            <!-- Chat List -->
+            <div class="chat-list" id="chatList">
+                <!-- Chat Items will be populated by JS -->
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+            <!-- Welcome Screen (Clean State) -->
+            <div class="welcome-screen" id="welcomeScreen" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; background-color: #f0f2f5; text-align: center; color: #41525d;">
+                <i class="fas fa-comments" style="font-size: 80px; color: #c0c7cb; margin-bottom: 20px;"></i>
+                <h1 style="font-weight: 300; margin-bottom: 15px;">WhatsApp Web</h1>
+                <p>Send and receive messages without keeping your phone online.</p>
+            </div>
+
+            <!-- Active Chat Area -->
+            <div id="activeChatArea" style="display: none; height: 100%; flex-direction: column; width: 100%;">
+                <!-- Chat Header -->
+                <header class="header chat-header">
+                    <div class="chat-header-info">
+                        <img src="" alt="Current Chat" class="avatar" id="currentChatAvatar">
+                        <div class="chat-title">
+                            <h2 id="currentChatName">Name</h2>
+                            <span class="status">Online</span>
+                        </div>
+                    </div>
+                    <div class="header-icons">
+                        <i class="fas fa-search" title="Search"></i>
+                        <i class="fas fa-ellipsis-v" title="Menu"></i>
+                    </div>
+                </header>
+
+                <!-- Messages Area -->
+                <div class="messages-container" id="messagesContainer">
+                    <!-- Messages will be populated by JS -->
+                </div>
+
+                <!-- Message Input Area -->
+                <footer class="message-input-area">
+                    <i class="far fa-smile" title="Emojis"></i>
+                    <i class="fas fa-paperclip" title="Attach"></i>
+                    <input type="text" placeholder="Type a message" id="messageInput">
+                    <button id="sendBtn" class="send-btn">
+                        <i class="fas fa-microphone" id="sendIcon"></i>
+                    </button>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
